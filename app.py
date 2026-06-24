@@ -36,7 +36,7 @@ def login():
 
         if user:
 
-            return "Login Successful"
+            return render_template('dashboard.html')
 
         else:
 
@@ -73,6 +73,18 @@ def register():
 
     return render_template('register.html')
 
+
+@app.route('/companies')
+def companies():
+
+    cursor.execute("SELECT * FROM companies")
+
+    company_list = cursor.fetchall()
+
+    return render_template(
+        'companies.html',
+        companies=company_list
+    )
 
 if __name__ == '__main__':
     app.run(debug=True)
