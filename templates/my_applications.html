@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>My Applications</title>
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+<body>
+
+<h2>My Applications</h2>
+
+<table border="1">
+
+<tr>
+
+<th>Company</th>
+
+<th>Package</th>
+
+<th>Status</th>
+
+</tr>
+
+{% for app in applications %}
+
+<tr>
+
+<td>{{app[0]}}</td>
+
+<td>{{app[1]}}</td>
+
+<td>
+
+<span class="
+{% if app[2]=='Selected' %}
+selected
+{% elif app[2]=='Rejected' %}
+rejected
+{% else %}
+applied
+{% endif %}
+">
+
+{{app[2]}}
+
+</span>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+<footer>
+
+<p>
+Student Placement Tracker © 2026
+</p>
+
+</footer>
+
+</body>
+
+</html>

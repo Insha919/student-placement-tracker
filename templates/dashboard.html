@@ -1,37 +1,56 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
-<title>Student Dashboard</title>
-
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
 <body>
+    <div class="navbar">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/companies">Companies</a>
+        <a href="/eligible_companies">Eligible Companies</a>
+        <a href="/my_applications">My Applications</a>
+        <a href="/profile">Profile</a>
+        <a href="/logout">Logout</a>
+    </div>
+    
+    <h1>Student Dashboard</h1>
 
-<h1>Student Dashboard</h1>
+    <div class="card">
+        <h3>Total Companies</h3>
+        <p>{{total_companies}}</p>
+    </div>
 
-<h3>Welcome Student</h3>
+    <div class="card">
+        <h3>Eligible Companies</h3>
+        <p>{{eligible_companies}}</p>
+    </div>
 
-<ul>
+    <div class="card">
+        <h3>Applied Companies</h3>
+        <p>{{applied_companies}}</p>
+    </div>
 
-<li>
+    <h3>Placement Progress</h3>
 
-<a href="/companies">
+    <div class="progress-bar">
+        <div class="progress-fill" style="width: {{progress}}%;">
+             {{progress}}%
+        </div>
+    </div>
 
-View Companies
+    <h3>Welcome Student</h3>
+    <ul>
+        <li><a href="/companies">View Companies</a></li>
+        <li><a href="/eligible_companies">View Eligible Companies</a></li>
+        <li><a href="/my_applications">My Applications</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
 
-</a>
-
-</li>
-
-<li>My Applications</li>
-
-<li>Profile</li>
-
-</ul>
+    <footer>
+        <p>Student Placement Tracker © 2026</p>
+    </footer>
 
 </body>
-
 </html>

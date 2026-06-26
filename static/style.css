@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+button {
+    padding: 5px 10px;
+}
+
+.card{
+    border:1px solid #ddd;
+    padding:20px;
+    margin:10px;
+    width:220px;
+    display:inline-block;
+    border-radius:10px;
+
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:0px 4px 12px rgba(0,0,0,0.2);
+}
+.card h3 {
+    margin-top: 0;
+}
+.navbar{
+    background-color:#333;
+    padding:15px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-right:20px;
+    font-weight:bold;
+}
+
+.navbar a:hover{
+    text-decoration:underline;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th{
+    background-color:#333;
+    color:white;
+}
+
+th,td{
+    padding:12px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background-color:#f2f2f2;
+}
+.selected{
+    background:#28a745;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+}
+
+.rejected{
+    background:#dc3545;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+}
+
+.applied{
+    background:#ffc107;
+    color:black;
+    padding:6px 12px;
+    border-radius:20px;
+}
+
+.progress-bar{
+    width:100%;
+    background:#ddd;
+    border-radius:20px;
+    margin-top:20px;
+}
+
+.progress-fill{
+    background:#4CAF50;
+    color:white;
+    text-align:center;
+    padding:10px;
+    border-radius:20px;
+}
+footer{
+    text-align:center;
+    margin-top:50px;
+    padding:20px;
+    color:#555;
+    border-top:1px solid #ddd;
+}

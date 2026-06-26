@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Profile</title>
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+<body>
+
+<h2>Student Profile</h2>
+
+<p>Name: {{student[1]}}</p>
+
+<p>Email: {{student[2]}}</p>
+
+<p>Branch: {{student[4]}}</p>
+
+<p>CGPA: {{student[5]}}</p>
+
+
+<footer>
+
+<p>
+Student Placement Tracker © 2026
+</p>
+
+</footer>
+</body>
+</html>

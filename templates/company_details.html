@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ company[1] }} - Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/companies">Companies</a>
+        <a href="/eligible_companies">Eligible Companies</a>
+        <a href="/my_applications">My Applications</a>
+        <a href="/profile">Profile</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <h2>Company Specification</h2>
+
+    <table border="1">
+        <tr>
+            <th>Field</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td><strong>Company Name</strong></td>
+            <td>{{ company[1] }}</td>
+        </tr>
+        <tr>
+            <td><strong>Package (LPA)</strong></td>
+            <td>{{ company[2] }}</td>
+        </tr>
+        <tr>
+            <td><strong>Minimum CGPA Required</strong></td>
+            <td>{{ company[3] }}</td>
+        </tr>
+        <tr>
+            <td><strong>Eligible Branch</strong></td>
+            <td>{{ company[4] }}</td>
+        </tr>
+        <tr>
+            <td><strong>Job Role</strong></td>
+            <td>{{ company[5] }}</td>
+        </tr>
+        <tr>
+            <td><strong>Job Location</strong></td>
+            <td>{{ company[6] }}</td>
+        </tr>
+        <tr>
+            <td><strong>Job Description</strong></td>
+            <td style="text-align: left;">{{ company[7] }}</td>
+        </tr>
+    </table>
+
+    <br>
+    <a href="/companies"><button>Back to Companies</button></a>
+<footer>
+
+<p>
+Student Placement Tracker © 2026
+</p>
+
+</footer>
+</body>
+</html>

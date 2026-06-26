@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Companies</title>
+    <title>Eligible Companies</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <h2>Available Companies</h2>
-
-    <input type="text" id="search" placeholder="Search Company">
+    <h2>Eligible Companies</h2>
+    <input type="text" id="search" placeholder="Search Eligible Company">
     <br><br>
 
     <table border="1">
         <tr>
-            <th>Name</th>
+            <th>Company</th>
             <th>Package</th>
             <th>Minimum CGPA</th>
-            <th>Branch</th>
-            <!-- 1. The Header Column goes here -->
-            <th>Details</th> 
+            <th>Apply</th>
+            <th>Details</th>
         </tr>
 
         {% for company in companies %}
@@ -26,8 +24,15 @@
             <td>{{company[1]}}</td>
             <td>{{company[2]}}</td>
             <td>{{company[3]}}</td>
-            <td>{{company[4]}}</td>
-            <!-- 2. The Actual Button goes here inside the loop -->
+            
+            <!-- 1. Match the 'Apply' Header -->
+            <td>
+                <a href="/apply/{{company[0]}}">
+                    <button>Apply</button>
+                </a>
+            </td>
+
+            <!-- 2. Match the 'Details' Header -->
             <td>
                 <a href="/company/{{company[0]}}">
                     <button>View Details</button>
